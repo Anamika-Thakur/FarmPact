@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmpact - Secure, Collaborate, Grow</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Include Ethers.js -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+
+   <script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyC7GAAPkIb_qwDnBQSRkVWg5vrnSC8YDUI",
+    authDomain: "farmpact-db635.firebaseapp.com",
+    databaseURL: "https://farmpact-db635-default-rtdb.firebaseio.com/",
+    projectId: "farmpact-db635",
+    storageBucket: "farmpact-db635.appspot.com",
+    messagingSenderId: "730889305528",
+    appId: "1:730889305528:web:79aecb4ca3d2417541634d"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+   </script> 
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Farmpact Logo" class="logo">
+            <h1>Farmpact</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Secure, Collaborate, Grow</h2>
+            <p>Empowering farmers and wholesalers through collaborative growth and secure investments.</p>
+            <a href="#how-it-works" class="cta">Learn More</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1: Pre-booking for Price Security</h3>
+                    <p>Wholesalers can pre-book crops at an assured price, providing farmers with a safety net and ensuring a stable supply for wholesalers.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 2: Dynamic Pricing</h3>
+                    <p>If the crop is successfully harvested, farmers can benefit from a higher return, as wholesalers will pay more than the initial agreed price.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 3: Financial and Research Support</h3>
+                    <p>Wholesalers can contribute funds or bring in experts to help improve crop health, leading to better yields and healthier produce.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 4: Risk Reduction</h3>
+                    <p>Leverage crop health monitoring tools and weather data insights to reduce risks in crop production.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 5: Blockchain Security</h3>
+                    <p>All transactions and agreements are securely managed through blockchain, ensuring transparency and trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-item">
+                <h3>Payment and Crop Booking</h3>
+                <p>Our platform allows wholesalers to easily book crops and make payments securely through integrated payment gateways.</p>
+                <button onclick="openBookingModal()">Book Crops Now</button>
+            </div>
+            <div class="feature-item">
+                <h3>Chat with Wholesalers</h3>
+                <p>Farmers can directly communicate with wholesalers using our real-time chat feature to discuss deals, crop conditions, and more.</p>
+                <button onclick="openChat()">Start Chatting</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is Farmpact?</h3>
+                <p>Farmpact is a platform designed to create a secure, collaborative environment for farmers and wholesalers, ensuring sustainable agriculture and reducing risks.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How does pre-booking work?</h3>
+                <p>Wholesalers can pre-book crops at an agreed price, providing financial stability to farmers and securing supply for wholesalers.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How is blockchain used in Farmpact?</h3>
+                <p>Blockchain is used to manage all transactions and agreements securely, ensuring transparency and trust between all parties.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Who can join Farmpact?</h3>
+                <p>Farmers, wholesalers, and researchers can join Farmpact to collaborate and contribute to sustainable agricultural practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Crops</h2>
+            <form id="bookingForm">
+                <label for="crop">Crop Type:</label>
+                <input type="text" id="crop" name="crop" required>
+                <label for="quantity">Quantity (in tons):</label>
+                <input type="number" id="quantity" name="quantity" required>
+                <label for="price">Agreed Price (per ton):</label>
+                <input type="number" id="price" name="price" required>
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chatBox" class="chat-box">
+        <div class="chat-header">
+            <span>Chat with Wholesalers</span>
+            <button class="close-chat" onclick="closeChat()">&times;</button>
+        </div>
+        <div class="chat-content" id="chatContent">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatMessage" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Farmpact. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

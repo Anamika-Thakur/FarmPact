@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f7;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('farm-background.jpg');
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta {
+    background-color: #FFD700;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.step {
+    width: 30%;
+    background-color: #e9f5e9;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.step h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Features Section */
+.features {
+    background-color: #f0f4f7;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.feature-item button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feature-item button:hover {
+    background-color: #45a049;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    background-color: #e9f5e9;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.faq-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Chat Box Styles */
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-content {
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-input input {
+    width: 80%;
+    padding: 5px;
+}
+
+.chat-input button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.close-chat {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
